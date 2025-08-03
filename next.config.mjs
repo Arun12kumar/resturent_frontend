@@ -4,11 +4,17 @@ const nextConfig = {
     serverActions: true,
     optimizePackageImports: ['@heroicons/react'],
   },
-  images: {
+ images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com', // Example image host
+        hostname: 'www.indianhealthyrecipes.com',
+        pathname: '/**', // Match all image paths
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com', // If still needed
+        pathname: '/**',
       },
     ],
   },
